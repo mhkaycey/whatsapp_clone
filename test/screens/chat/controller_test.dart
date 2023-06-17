@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:whatsapp_clone/screens/chat/controller.dart';
 import 'package:whatsapp_clone/screens/status/controller.dart';
+import 'package:whatsapp_clone/screens/chat/index.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -23,11 +24,11 @@ void main() {
       () async {
         final result = await chatListController.insertData();
 
-        //  await chatListController.getChatList();
+        await chatListController.getChatList();
 
         expect(result, 1);
         //  expect("", isA<ChatListController>());
-        // expect(chatListController.chatList, isA<ChatList>());
+        expect(chatListController.chatList, isA<List>());
       },
     );
 
