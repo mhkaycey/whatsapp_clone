@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:iconly/iconly.dart';
 import 'package:whatsapp_clone/common/model/chatlist.dart';
 import 'package:whatsapp_clone/common/theme/theme_controller.dart';
 import 'package:whatsapp_clone/screens/chat/index.dart';
@@ -11,11 +12,32 @@ class DashboardScreen extends GetView<DashboardController> {
   DashboardScreen({super.key});
 
   final themeController = Get.put(ThemeController());
+  final List<Tab> dashTab = <Tab>[
+    const Tab(
+      child: Icon(IconlyBold.user_3),
+    ),
+    const Tab(
+      // text: "Chat",
+      child: Text(
+        "CHATS",
+        style: TextStyle(
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    ),
+    const Tab(
+      text: "STATUS",
+    ),
+    const Tab(
+      text: "CALLS",
+    )
+  ];
 
   @override
   Widget build(BuildContext context) {
     StatusController insert = Get.put(StatusController());
     ChatListController chat = Get.put(ChatListController());
+
     return Scaffold(
       appBar: AppBar(
         actionsIconTheme: const IconThemeData(
@@ -69,7 +91,7 @@ class DashboardScreen extends GetView<DashboardController> {
           indicatorColor: Colors.green,
 
           controller: controller.controller,
-          tabs: controller.dashTab,
+          tabs: dashTab,
         ),
       ),
       floatingActionButton: FloatingActionButton(

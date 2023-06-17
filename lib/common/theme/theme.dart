@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Themes {
   static final lightTheme = ThemeData(
       useMaterial3: true,
+      // fontFamily: 'MontserratAlternates',
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.green,
       ),
@@ -15,6 +16,7 @@ class Themes {
       ));
   static final darkTheme = ThemeData(
     useMaterial3: true,
+    fontFamily: 'MontserratAlternates',
     scaffoldBackgroundColor: Colors.black12,
     textTheme: const TextTheme(
       labelMedium: TextStyle(
