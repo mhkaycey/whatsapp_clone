@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
-import 'package:whatsapp_clone/common/model/chatlist.dart';
 import 'package:whatsapp_clone/common/theme/theme_controller.dart';
 import 'package:whatsapp_clone/screens/chat/index.dart';
 import '../status/index.dart';
@@ -98,14 +97,14 @@ class DashboardScreen extends GetView<DashboardController> {
         backgroundColor: Colors.green,
         child: const Icon(Icons.message),
         onPressed: () {
-          chat.insertData(
-            chatxist: ChatList(
-              // id: 0,
-              message: "Guy",
-              time: "11:30pm",
-              username: "Henry",
-            ),
-          );
+          // chat.insertData(
+          //   chatxist: ChatList(
+          //     // id: 0,
+          //     message: "Guy",
+          //     time: "11:30pm",
+          //     username: "Henry",
+          //   ),
+          // );
           // insert.insertStatus(
           //   status: Status(
           //       name: "Mark Henry",
