@@ -14,14 +14,14 @@ class ChatDetailsPage extends GetView<ChatDetailsController> {
           children: [
             InkWell(
               onTap: () {},
-              child: ListTile(
-                leading: const CircleAvatar(
+              child: const ListTile(
+                leading: CircleAvatar(
                   radius: 30,
                   backgroundImage: AssetImage("assets/whatsapp.png"),
                 ),
-                title: const Text("UserName"),
+                title: Text("UserName"),
                 subtitle: Row(
-                  children: const [
+                  children: [
                     // Icon(
                     //   index % 2 == 0 ? Icons.done : Icons.done_all,
                     //   color: index % 2 == 0 ? Colors.grey : Colors.blue,
